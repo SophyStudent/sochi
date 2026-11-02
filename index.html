@@ -115,11 +115,11 @@
         <!-- Soft Top Ambient Studio Light -->
         <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-[720px] sm:w-[900px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(182,208,68,0.25)_0%,rgba(100,125,30,0.10)_50%,transparent_75%)] blur-2xl pointer-events-none"></div>
         <!-- Warm Mid-Glow directly behind the fruit loop -->
-        <div class="absolute top-[40%] left-1/2 -translate-x-1/2 w-[580px] sm:w-[760px] h-[320px] rounded-full bg-[radial-gradient(circle,rgba(148,172,48,0.22)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
+        <div class="absolute top-[42%] sm:top-[40%] left-1/2 -translate-x-1/2 w-[580px] sm:w-[760px] h-[320px] rounded-full bg-[radial-gradient(circle,rgba(148,172,48,0.22)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
       </div>
 
       <!-- LAYER 2: OVAL ARCH SLIDING CARDS (z-10) - PASSES BEHIND DOMINANT FG CUP -->
-      <div class="absolute inset-x-0 top-[40%] sm:top-1/2 -translate-y-1/2 sm:-translate-y-[52%] md:-translate-y-[56%] flex items-center justify-center z-10 pointer-events-none">
+      <div class="absolute inset-x-0 top-[44%] sm:top-1/2 -translate-y-1/2 sm:-translate-y-[52%] md:-translate-y-[56%] flex items-center justify-center z-10 pointer-events-none">
         <div class="w-full max-w-6xl relative h-56 sm:h-80 md:h-[390px] flex items-center justify-center">
           <div id="slide-carousel" class="absolute inset-0 flex items-center justify-center pointer-events-auto">
             
@@ -162,9 +162,9 @@
       </div>
 
       <!-- LAYER 3: PROMINENT FOREGROUND CUP & POWDER MOUND (z-20) -->
-      <!-- Positioned in harmony on both mobile and desktop -->
-      <div class="absolute inset-x-0 bottom-6 sm:bottom-0 flex items-end justify-center z-20 pointer-events-none overflow-hidden">
-        <div id="hero-cup-container" class="relative w-[340px] h-[370px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] lg:w-[600px] lg:h-[600px] flex items-end justify-center translate-y-2 sm:translate-y-2 md:translate-y-3 group select-none">
+      <!-- Positioned in harmony on both mobile and desktop (Cup elevated well above fruit loop to conceal center gap) -->
+      <div class="absolute inset-x-0 bottom-24 sm:bottom-0 flex items-end justify-center z-20 pointer-events-none overflow-hidden">
+        <div id="hero-cup-container" class="relative w-[500px] h-[520px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] lg:w-[600px] lg:h-[600px] flex items-end justify-center translate-y-0 sm:translate-y-2 md:translate-y-3 group select-none">
           
           <!-- Soft Grounding Contact Shadow beneath Mound Base -->
           <div class="absolute bottom-3 sm:bottom-4 w-3/4 h-8 rounded-full bg-black/40 blur-xl pointer-events-none"></div>
@@ -471,13 +471,13 @@
       { x: 430,  y: 50,  scale: 0.86, rotate: 14,  opacity: 0.80 }  // Slot +2 (Far Right)
     ];
 
-    // Mobile slots: tighter, hugging cup rim & shoulders, with outer cards peeking on screen edges
+    // Mobile slots: calibrated so flanking cards pass behind the cup tumbler while cup rises above
     const mobileSlots = [
-      { x: -172, y: 30,  scale: 0.68, rotate: -14, opacity: 0.50 }, // Slot -2 (peeks at left edge)
-      { x: -110, y: -14, scale: 0.92, rotate: -7,  opacity: 1.00 }, // Slot -1 (hugs left rim)
-      { x: 0,    y: -30, scale: 0.65, rotate: 0,   opacity: 0.00 }, // Slot  0 (dissolved behind cup)
-      { x: 110,  y: -14, scale: 0.92, rotate: 7,   opacity: 1.00 }, // Slot +1 (hugs right rim)
-      { x: 172,  y: 30,  scale: 0.68, rotate: 14,  opacity: 0.50 }  // Slot +2 (peeks at right edge)
+      { x: -176, y: 28,  scale: 0.68, rotate: -14, opacity: 0.45 }, // Slot -2 (peeks at left edge)
+      { x: -120, y: -10, scale: 0.92, rotate: -7,  opacity: 1.00 }, // Slot -1 (hugs left flank)
+      { x: 0,    y: -24, scale: 0.65, rotate: 0,   opacity: 0.00 }, // Slot  0 (fully concealed behind cup)
+      { x: 120,  y: -10, scale: 0.92, rotate: 7,   opacity: 1.00 }, // Slot +1 (hugs right flank)
+      { x: 176,  y: 28,  scale: 0.68, rotate: 14,  opacity: 0.45 }  // Slot +2 (peeks at right edge)
     ];
 
     function updateCarousel(animate = true) {
