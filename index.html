@@ -115,11 +115,11 @@
         <!-- Soft Top Ambient Studio Light -->
         <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-[720px] sm:w-[900px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(182,208,68,0.25)_0%,rgba(100,125,30,0.10)_50%,transparent_75%)] blur-2xl pointer-events-none"></div>
         <!-- Warm Mid-Glow directly behind the fruit loop -->
-        <div class="absolute top-[42%] sm:top-[40%] left-1/2 -translate-x-1/2 w-[580px] sm:w-[760px] h-[320px] rounded-full bg-[radial-gradient(circle,rgba(148,172,48,0.22)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
+        <div class="absolute top-[46%] sm:top-[40%] left-1/2 -translate-x-1/2 w-[580px] sm:w-[760px] h-[320px] rounded-full bg-[radial-gradient(circle,rgba(148,172,48,0.22)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
       </div>
 
       <!-- LAYER 2: OVAL ARCH SLIDING CARDS (z-10) - PASSES BEHIND DOMINANT FG CUP -->
-      <div class="absolute inset-x-0 top-[44%] sm:top-1/2 -translate-y-1/2 sm:-translate-y-[52%] md:-translate-y-[56%] flex items-center justify-center z-10 pointer-events-none">
+      <div class="absolute inset-x-0 top-[50%] sm:top-1/2 -translate-y-1/2 sm:-translate-y-[52%] md:-translate-y-[56%] flex items-center justify-center z-10 pointer-events-none">
         <div class="w-full max-w-6xl relative h-56 sm:h-80 md:h-[390px] flex items-center justify-center">
           <div id="slide-carousel" class="absolute inset-0 flex items-center justify-center pointer-events-auto">
             
@@ -163,7 +163,7 @@
 
       <!-- LAYER 3: PROMINENT FOREGROUND CUP & POWDER MOUND (z-20) -->
       <!-- Positioned in harmony on both mobile and desktop (Cup elevated well above fruit loop to conceal center gap) -->
-      <div class="absolute inset-x-0 bottom-24 sm:bottom-0 flex items-end justify-center z-20 pointer-events-none overflow-hidden">
+      <div class="absolute inset-x-0 bottom-28 sm:bottom-0 flex items-end justify-center z-20 pointer-events-none overflow-hidden">
         <div id="hero-cup-container" class="relative w-[500px] h-[520px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] lg:w-[600px] lg:h-[600px] flex items-end justify-center translate-y-0 sm:translate-y-2 md:translate-y-3 group select-none">
           
           <!-- Soft Grounding Contact Shadow beneath Mound Base -->
@@ -184,8 +184,8 @@
           <!-- Cup 4: Raspberry -->
           <img id="hero-cup-4" src="assets/hero_raspberry.webp" alt="Raspberry Matcha Cup" class="hero-cup-layer absolute inset-0 w-full h-full object-contain object-bottom opacity-0 pointer-events-none drop-shadow-[0_16px_32px_rgba(0,0,0,0.55)] group-hover:scale-[1.015] transition-transform duration-300" />
 
-          <!-- Interactive Clickable Cup Button (Opens Cart Window) -->
-          <button onclick="openCheckoutModal()" aria-label="Open Cart for active matcha cup" class="absolute inset-x-[18%] top-[2%] bottom-[12%] cursor-pointer pointer-events-auto z-10 rounded-full focus:outline-none" title="Click cup to order"></button>
+          <!-- Interactive Clickable Cup Button (Precisely fitted to tumbler silhouette so clicks on flanking fruits are NEVER blocked) -->
+          <button onclick="openCheckoutModal()" aria-label="Open Cart for active matcha cup" class="absolute top-[6%] bottom-[42%] left-1/2 -translate-x-1/2 w-[130px] sm:w-[160px] md:w-[180px] cursor-pointer pointer-events-auto z-10 rounded-[22px] focus:outline-none" title="Click cup to order"></button>
         </div>
       </div>
 
@@ -234,43 +234,32 @@
         </div>
       </header>
 
-      <!-- MOBILE-ONLY HEADER: CHOOSE YOUR MATCHA TEA & FLAVOR (Moved to top strictly in mobile view) -->
-      <div class="sm:hidden relative z-40 pt-2 flex flex-col items-center text-center pointer-events-none px-4">
-        <!-- 1. CHOOSE YOUR MATCHA TEA (FIRST & BOLD) -->
-        <h1 class="font-serif text-xl font-bold text-white tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] leading-tight mb-0.5">
+      <!-- MOBILE-ONLY HEADING: CHOOSE YOUR MATCHA TEA (Brought down closer to the action above the cup) -->
+      <div class="sm:hidden relative z-40 mt-14 mb-2 flex flex-col items-center text-center pointer-events-none px-4">
+        <h1 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] leading-tight">
           Choose your matcha tea
         </h1>
-
-        <!-- 2. FLAVOUR NAME (FOLLOWED BY FLAVOUR) -->
-        <div class="flex items-center justify-center">
-          <span id="active-flavor-name-mobile" class="font-sans text-xs font-bold tracking-[0.18em] text-[#ffe699] drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] uppercase">
-            Cranberry Iced Matcha
-          </span>
-        </div>
       </div>
 
       <!-- Center Space Anchor -->
       <div class="flex-grow pointer-events-none"></div>
 
-      <!-- LAYER 5: CONTROLS & CART BUTTON (z-40) - CART REMAINS BELOW ON MOBILE & DESKTOP -->
+      <!-- LAYER 5: CONTROLS & CART BUTTON (z-40) - FLAVOR & CART REMAIN BELOW ON MOBILE & DESKTOP -->
       <div class="relative z-40 mb-2 sm:mb-2.5 flex flex-col items-center text-center pointer-events-none px-4">
         
-        <!-- DESKTOP-ONLY: CHOOSE YOUR MATCHA TEA & FLAVOUR (hidden on mobile, visible on sm+) -->
-        <div class="hidden sm:flex flex-col items-center">
-          <!-- 1. CHOOSE YOUR MATCHA TEA (FIRST & BOLD) -->
-          <h1 class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] leading-tight mb-1">
-            Choose your matcha tea
-          </h1>
+        <!-- 1. CHOOSE YOUR MATCHA TEA (DESKTOP-ONLY HERE, AS MOBILE IS CLOSER TO ACTION ABOVE) -->
+        <h1 class="hidden sm:block font-serif text-2xl md:text-3xl font-bold text-white tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] leading-tight mb-1">
+          Choose your matcha tea
+        </h1>
 
-          <!-- 2. FLAVOUR NAME (FOLLOWED BY FLAVOUR) -->
-          <div class="mb-2 flex items-center justify-center">
-            <span id="active-flavor-name" class="font-sans text-xs sm:text-sm md:text-base font-bold tracking-[0.18em] text-[#ffe699] drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] uppercase">
-              Cranberry Iced Matcha
-            </span>
-          </div>
+        <!-- 2. FLAVOUR NAME (BELOW ON BOTH MOBILE & DESKTOP) -->
+        <div class="mb-2 flex items-center justify-center">
+          <span id="active-flavor-name" class="font-sans text-xs sm:text-sm md:text-base font-bold tracking-[0.18em] text-[#ffe699] drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] uppercase">
+            Cranberry Iced Matcha
+          </span>
         </div>
 
-        <!-- 3. CART (REMAINS BELOW ON BOTH MOBILE AND DESKTOP) -->
+        <!-- 3. CART CTA BUTTON (REMAINS BELOW ON BOTH MOBILE AND DESKTOP) -->
         <div class="pointer-events-auto">
           <button onclick="openCheckoutModal()" class="buy-cta-btn bg-white hover:bg-[#fffcf2] text-neutral-900 px-6 sm:px-7 py-2 sm:py-2.5 rounded-full flex items-center gap-2 cursor-pointer border border-white/90 shadow-xl group active:scale-95 transition-all">
             <span class="material-symbols-outlined text-[17px] sm:text-[19px] text-neutral-950 font-bold group-hover:scale-110 transition-transform">shopping_bag</span>
@@ -540,11 +529,9 @@
       // Update active flavour name and CTA price
       const current = flavors[activeIndex];
       const nameEl = document.getElementById('active-flavor-name');
-      const nameMobileEl = document.getElementById('active-flavor-name-mobile');
       const priceEl = document.getElementById('flavor-price-tag');
       
       if (nameEl) nameEl.innerText = current.fullName;
-      if (nameMobileEl) nameMobileEl.innerText = current.fullName;
       if (priceEl) priceEl.innerText = `${current.price} • Add to Cart`;
     }
 
